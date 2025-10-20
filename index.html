@@ -1,77 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fazafa ID - Solusi Website Profesional</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Fazafa ID — Solusi Website Profesional</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
+  <!-- NAV -->
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Fazafa ID</h1>
-      <nav>
+      <a class="logo" href="#">Fazafa ID</a>
+      <nav class="nav-links">
         <a href="#layanan">Layanan</a>
+        <a href="#paket">Paket</a>
         <a href="#portofolio">Portofolio</a>
-        <a href="#kontak" class="btn-wa">Hubungi Kami</a>
+        <a href="#kontak" class="btn-wa">Hubungi</a>
       </nav>
+      <button class="nav-toggle" aria-label="toggle menu">☰</button>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2 data-animate="fade">Bikin Website Profesional <br>Dalam Hitungan Hari</h2>
-      <p data-animate="fade">Fazafa ID bantu bisnis Anda tampil online dengan cepat, rapi, dan menarik.</p>
-      <a href="https://wa.me/6281234567890" class="btn-primary" target="_blank">Konsultasi via WhatsApp</a>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left" data-animate>
+        <h1>Bikin Website Profesional<br><span class="accent">Dalam Hitungan Hari</span></h1>
+        <p>Desain rapi, cepat, dan siap pakai — solusi lengkap untuk bisnis, toko online, dan landing page.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/6285966189998" class="btn-primary" target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+          <a href="#layanan" class="btn-ghost">Lihat Layanan</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <!-- CSS-only illustration box -->
+        <div class="mockup">
+          <div class="mockup-screen"></div>
+          <div class="mockup-panel"></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Layanan -->
   <section id="layanan" class="section">
-    <h3 class="section-title">Layanan Kami</h3>
+    <h2 class="section-title" data-animate>Layanan Kami</h2>
     <div class="cards">
-      <div class="card" data-animate="fade-up">
+      <article class="card" data-animate>
         <div class="icon web"></div>
-        <h4>Website Bisnis</h4>
-        <p>Website profesional untuk usaha kecil & menengah.</p>
-      </div>
-      <div class="card" data-animate="fade-up">
+        <h3>Website Bisnis</h3>
+        <p>Profil bisnis profesional, SEO friendly, mudah dikembangkan.</p>
+      </article>
+      <article class="card" data-animate>
         <div class="icon shop"></div>
-        <h4>Toko Online</h4>
-        <p>Sistem e-commerce siap pakai dan mudah dikelola.</p>
-      </div>
-      <div class="card" data-animate="fade-up">
+        <h3>Toko Online</h3>
+        <p>Integrasi pembayaran, produk, dan manajemen stok sederhana.</p>
+      </article>
+      <article class="card" data-animate>
         <div class="icon landing"></div>
-        <h4>Landing Page</h4>
-        <p>Desain fokus pada konversi dan promosi produk/jasa.</p>
+        <h3>Landing Page</h3>
+        <p>Fokus konversi: promosi, pendaftaran, dan sales funnel.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Paket -->
+  <section id="paket" class="section dark">
+    <h2 class="section-title" data-animate>Paket & Harga</h2>
+    <div class="pricing" data-animate>
+      <div class="price-card">
+        <h4>Paket Basic</h4>
+        <p class="price">Rp 1.200.000</p>
+        <ul>
+          <li>1 halaman statis</li>
+          <li>Design responsive</li>
+          <li>Domain & setup</li>
+        </ul>
+        <a href="https://wa.me/6285966189998" class="btn-primary" target="_blank" rel="noopener">Order via WA</a>
+      </div>
+      <div class="price-card featured">
+        <h4>Paket Pro</h4>
+        <p class="price">Rp 2.500.000</p>
+        <ul>
+          <li>Multi-halaman</li>
+          <li>Integrasi payment</li>
+          <li>Optimasi SEO dasar</li>
+        </ul>
+        <a href="https://wa.me/6285966189998" class="btn-primary" target="_blank" rel="noopener">Order via WA</a>
+      </div>
+      <div class="price-card">
+        <h4>Paket Toko</h4>
+        <p class="price">Rp 3.800.000</p>
+        <ul>
+          <li>Shop + cart</li>
+          <li>Manajemen produk</li>
+          <li>Panduan admin</li>
+        </ul>
+        <a href="https://wa.me/6285966189998" class="btn-primary" target="_blank" rel="noopener">Order via WA</a>
       </div>
     </div>
   </section>
 
-  <!-- Portofolio -->
-  <section id="portofolio" class="section dark">
-    <h3 class="section-title">Portofolio Fazafa ID</h3>
+  <!-- Portofolio (CSS placeholders) -->
+  <section id="portofolio" class="section">
+    <h2 class="section-title" data-animate>Portofolio Fazafa ID</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item" data-animate="zoom"></div>
-      <div class="portfolio-item" data-animate="zoom"></div>
-      <div class="portfolio-item" data-animate="zoom"></div>
+      <div class="portfolio-item" data-animate></div>
+      <div class="portfolio-item" data-animate></div>
+      <div class="portfolio-item" data-animate></div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta">
-    <h3 data-animate="fade">Tingkatkan Bisnis Anda Bersama Fazafa ID!</h3>
-    <a href="https://wa.me/6281234567890" class="btn-primary" target="_blank">Chat via WhatsApp</a>
+    <div class="container-cta" data-animate>
+      <h3>Butuh website yang jalan hari ini?</h3>
+      <a href="https://wa.me/6285966189998" class="btn-primary" target="_blank" rel="noopener">Chat Sekarang di WhatsApp</a>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer id="kontak">
-    <p>© 2025 Fazafa ID. Semua Hak Dilindungi.</p>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Fazafa ID</h4>
+        <p>Solusi website & toko online untuk UKM dan bisnis profesional.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WA: <a href="https://wa.me/6285966189998">0859-6618-9998</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Fazafa ID — Semua hak dilindungi.</div>
   </footer>
+
 </body>
 </html>
