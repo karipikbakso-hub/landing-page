@@ -101,3 +101,27 @@ footer{background:#0f1724;color:#cbd5e1;padding:36px 20px;margin-top:32px}
   .hero p{font-size:14px}
   .btn-primary{padding:10px 16px}
 }
+
+
+/* FIX SCROLL BUG CHROME iOS / SAFARI */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  min-height: 100dvh; /* dynamic viewport fix */
+  overflow-y: auto;
+}
+
+section, .hero, .cta {
+  min-height: 100dvh;
+}
+
+/* Extra iOS scrollbar fix */
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+}
